@@ -1,7 +1,12 @@
+#!/usr/bin/python3
+
+"""
+Module 0-pascal_triangle
+"""
 def pascal_triangle(n):
     """
          returns integers representing
-         Pascal’s triangle of n
+         Pascal triangle of n
          Returns an empty list if n <= 0
     """
     if n <= 0:
