@@ -1,17 +1,22 @@
 #!/usr/bin/python3
-""" Defines lockboxes """
+"""BOXES BOXES"""
 
 
 def canUnlockAll(boxes):
-    """ Determines whether all boxes can be unlocked or not
-    Returns: True if all boxes can be unlocked  and
-             False if not
-             """
-    keys = [0]
-    for key in keys:
-        for val in boxes[key]:
-            if val not in keys:
-                keys.append(val)
-    if len(keys) == len(boxes):
-        return True
-    return False
+    """
+    Determines whether the boxes can be locked or not.
+    """
+    total_boxes = len(boxes)
+    setofkeys = [0]
+    counter = 0
+    index = 0
+
+    while index < len(setofkeys):
+        setkey = setofkeys[index]
+        for key in boxes[setkey]:
+            if 0 < key < total_boxes and key not in setofkeys:
+                setofkeys.append(key)
+                counter += 1
+        index += 1
+
+    return counter == total_boxes - 1
