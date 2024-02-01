@@ -18,8 +18,8 @@ def validUTF8(data):
     """
     remaining_bytes = 0
 
-    mask_UTF8_BIT_1 = 1 << 7 # 10000000
-    mask_UTF8_BIT_2 = 1 << 6 # 01000000
+    mask_UTF8_BIT_1 = 1 << 7
+    mask_UTF8_BIT_2 = 1 << 6
 
     for i in data:
 
